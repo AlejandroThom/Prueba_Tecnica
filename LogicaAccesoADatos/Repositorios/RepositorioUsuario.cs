@@ -12,6 +12,13 @@ namespace LogicaAccesoADatos.Repositorios
     {
         private static readonly List<Usuario> s_usuarios = new List<Usuario>() { new Usuario("@Alfonso"), new Usuario("@Ivan"), new Usuario("@Alicia") };
 
+        public void LimpiarRegistros()
+        {
+            s_usuarios.Clear();
+            s_usuarios.Add(new Usuario("@Alfonso"));
+            s_usuarios.Add(new Usuario("@Ivan"));
+            s_usuarios.Add(new Usuario("@Alicia"));
+        }
         public void CrearUsuario(Usuario usuario)
         {
             if (s_usuarios.Find(u => u.NombreUsuario.Nombre.ToLower() == usuario.NombreUsuario.Nombre.ToLower()) != null)

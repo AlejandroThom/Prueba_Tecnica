@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LogicaAccesoADatos.IRepositorio
 {
-    public interface IRepositorioUsuario
+    public interface IRepositorioUsuario : IRepositorio
     {
         /// <summary>
         /// Dado el id de un usuario (A seguir) y el id de otro usuario(Futuro Seguidor)
@@ -44,5 +44,7 @@ namespace LogicaAccesoADatos.IRepositorio
         /// <param name="nombreUsuario">nombre de usuario a encontrar a quien sigue</param>
         /// <returns>Una lista de usuarios que son los seguidos por el usuario</returns>
         IEnumerable<Usuario> ObtenerSeguidosDeUsuario(string nombreUsuario);
+
+        
     }
 }

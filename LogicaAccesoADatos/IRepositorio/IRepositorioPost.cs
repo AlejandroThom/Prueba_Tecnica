@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LogicaAccesoADatos.IRepositorio
 {
-    public interface IRepositorioPost
+    public interface IRepositorioPost : IRepositorio
     {
 
         /// <summary>
@@ -41,5 +41,6 @@ namespace LogicaAccesoADatos.IRepositorio
         /// <param name="idPost">El id de un post</param>
         /// <returns>Retorna un post con todos sus datos</returns>
         Post ObtenerPostPorId(int idPost);
+
     }
 }

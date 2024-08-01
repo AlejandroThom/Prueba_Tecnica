@@ -16,6 +16,10 @@ namespace LogicaAccesoADatos.Repositorios
             post.Validar();
             s_posts.Add(post);
         }
+        public void LimpiarRegistros()
+        {
+            s_posts.Clear();
+        }
 
         public Post ObtenerPostPorId(int idPost)
         {
