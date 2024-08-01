@@ -26,23 +26,22 @@ namespace Pruebas
             _repoUsuario = new RepositorioUsuario();
             CUSeguirUsuario = new CUSeguirUsuario(_repoUsuario);
             CUVerificarSeguidorDeUsuario = new CUVerificarSeguidorDeUsuario(_repoUsuario);
+            _repoUsuario.LimpiarRegistros();
         }
 
         [Fact]
         public void UsuarioControllerTest_SeguirAUsuarioCorrectamente()
         {
             //arrange
-            _repoUsuario.CrearUsuario(new Usuario("@Andres"));
-            _repoUsuario.CrearUsuario(new Usuario("@Andrea"));
             var controller = new UsuarioController(CUSeguirUsuario,CUVerificarSeguidorDeUsuario);
 
             //Action
-            var result = controller.SeguirAUsuario(new SeguimientoUsuarioDTO {NombreUsuarioASeguir="@Andres",NombreUsuarioSeguidor="@Andrea" });
+            var result = controller.SeguirAUsuario(new SeguimientoUsuarioDTO {NombreUsuarioASeguir="@Ivan",NombreUsuarioSeguidor= "@Alicia" });
             
             //Assert
             Assert.IsType(typeof(OkObjectResult), result);
             var okResult = result as OkObjectResult;
-            Assert.Equal("Andrea empezó a seguir a Andres", okResult.Value);
+            Assert.Equal("Alicia empezó a seguir a Ivan", okResult.Value);
             
         }
 
@@ -51,16 +50,17 @@ namespace Pruebas
         {
             //arrange
             var controller = new UsuarioController(CUSeguirUsuario, CUVerificarSeguidorDeUsuario);
+            controller.SeguirAUsuario(new SeguimientoUsuarioDTO { NombreUsuarioASeguir = "@Alfonso", NombreUsuarioSeguidor = "@Alicia" });
             //Action
-            var result = controller.SeguirAUsuario(new SeguimientoUsuarioDTO { NombreUsuarioASeguir = "@Andres", NombreUsuarioSeguidor = "@Andrea" });
+            var result = controller.SeguirAUsuario(new SeguimientoUsuarioDTO { NombreUsuarioASeguir = "@Alfonso", NombreUsuarioSeguidor = "@Alicia" });
            
             var okResult = result as BadRequestObjectResult;
 
-            var result2 = controller.SeguirAUsuario(new SeguimientoUsuarioDTO { NombreUsuarioASeguir = "@res", NombreUsuarioSeguidor = "@Andrea" });
+            var result2 = controller.SeguirAUsuario(new SeguimientoUsuarioDTO { NombreUsuarioASeguir = "@res", NombreUsuarioSeguidor = "@Alicia" });
 
             var okResult2 = result2 as BadRequestObjectResult;
             //Assert
-            Assert.Equal("Andrea ya esta siguiendo a @Andres", okResult.Value);
+            Assert.Equal("Alicia ya esta siguiendo a @Alfonso", okResult.Value);
             Assert.Equal("No se encontró ningún usuario @res", okResult2.Value);
         }
 
@@ -70,11 +70,15 @@ namespace Pruebas
             //arrange
             var controller = new UsuarioController(CUSeguirUsuario, CUVerificarSeguidorDeUsuario);
             //Action
-            var result = controller.SeguirAUsuario(new SeguimientoUsuarioDTO { NombreUsuarioASeguir = "@res", NombreUsuarioSeguidor = "@Andrea" });
-
-            var okResult = result as BadRequestObjectResult;
+            var result = controller.SeguirAUsuario(new SeguimientoUsuarioDTO { NombreUsuarioASeguir = "@res", NombreUsuarioSeguidor = "@Alicia" });
+            var result2 = controller.SeguirAUsuario(new SeguimientoUsuarioDTO { NombreUsuarioASeguir = "@Andres", NombreUsuarioSeguidor = "@ndrea" });
+            
+            var badResult = result as BadRequestObjectResult;
+            var badResult2 = result2 as BadRequestObjectResult;
             //Assert
-            Assert.Equal("No se encontró ningún usuario @res", okResult.Value);
+            Assert.Equal("No se encontró ningún usuario @res", badResult.Value);
+            Assert.Equal("No se encontró ningún usuario @Andres", badResult2.Value);
+
         }
     }
 }

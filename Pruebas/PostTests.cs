@@ -37,6 +37,8 @@ namespace Pruebas
             CUObtenerUsuario = new CUObtenerUsuario(_repoUsuario);
             CUSeguirUsuario = new CUSeguirUsuario(_repoUsuario);
             CUVerificarSeguidorDeUsuario = new CUVerificarSeguidorDeUsuario(_repoUsuario);
+            _repoUsuario.LimpiarRegistros();
+            _repoPosts.LimpiarRegistros();
         }
 
         [Fact]
