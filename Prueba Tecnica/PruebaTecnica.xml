@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Prueba Tecnica</name>
+    </assembly>
+    <members>
+        <member name="M:Prueba_Tecnica.Controllers.PostController.ObtenerPostPorId(System.Int32)">
+            <summary>
+            Dado un id devuelve el post que tenga ese id
+            </summary>
+            <param name="idPost">El id de un post</param>
+            <returns>Los datos de un post</returns>
+        </member>
+        <member name="M:Prueba_Tecnica.Controllers.PostController.PublicarUnPost(DTOs.DTOsPosts.CrearPostDTO)">
+            <summary>
+            Dado un mensaje y un nombre de usuario se crea un post
+            </summary>
+            <param name="datos">El mensaje y el nombre de usuario</param>
+            <returns>Retorna un mensaje que contiene el mensaje, la hora de la creación y el nombre del usuario</returns>
+        </member>
+        <member name="M:Prueba_Tecnica.Controllers.PostController.ObtenerPostDeLosSeguidosDeUnUsuario(System.String)">
+            <summary>
+            Dado un nombre de usuario se busca los post más recientes hechos por sus seguidos
+            </summary>
+            <param name="nombreUsuario">El nombre de usuario a ver a quienes sigue</param>
+            <returns>Retorna una lista con los post hechos por los seguidos del usuario</returns>
+        </member>
+        <member name="M:Prueba_Tecnica.Controllers.UsuarioController.SeguirAUsuario(DTOs.DTOsUsuarios.SeguimientoUsuarioDTO)">
+            <summary>
+            Dado dos nombres de usuario, un usuario empieza a seguir al otro.
+            </summary>
+            <param name="dto">Los dos nombres de usuario(seguidor y a seguir)</param>
+            <returns>Un mensaje de exito si se sigue exitosamente a otro usuario, uno de error en caso contrario</returns>
+        </member>
+    </members>
+</doc>

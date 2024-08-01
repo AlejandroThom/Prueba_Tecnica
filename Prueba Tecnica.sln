@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prueba Tecnica", "Prueba Tecnica\Prueba Tecnica.csproj", "{779E10E7-1BD3-4F49-9F44-2B285066D919}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogicaDeNegocio", "LogicaDeNegocio\LogicaDeNegocio.csproj", "{E6CE821C-5B92-4EE5-BCD6-EFD2F710BC87}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogicaAccesoADatos", "LogicaAccesoADatos\LogicaAccesoADatos.csproj", "{B4A46539-1211-4DFD-A7B3-DD0AE0696B58}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pruebas", "Pruebas\Pruebas.csproj", "{62BCD632-021F-479C-8EE4-0FDDFE43BBF1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CasosDeUso", "CasosDeUso\CasosDeUso.csproj", "{7C6B4D96-B85E-4EAE-8D94-074E6D04A107}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTOs", "DTOs\DTOs.csproj", "{DE100EDC-4B11-440F-98F8-8C88D0C88D58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicacionConsolaPruebaTecnica", "AplicacionConsolaPruebaTecnica\AplicacionConsolaPruebaTecnica.csproj", "{B5C164BB-C270-4CBC-9EFD-9175B1F1B275}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{779E10E7-1BD3-4F49-9F44-2B285066D919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{779E10E7-1BD3-4F49-9F44-2B285066D919}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{779E10E7-1BD3-4F49-9F44-2B285066D919}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{779E10E7-1BD3-4F49-9F44-2B285066D919}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6CE821C-5B92-4EE5-BCD6-EFD2F710BC87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6CE821C-5B92-4EE5-BCD6-EFD2F710BC87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6CE821C-5B92-4EE5-BCD6-EFD2F710BC87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6CE821C-5B92-4EE5-BCD6-EFD2F710BC87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4A46539-1211-4DFD-A7B3-DD0AE0696B58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4A46539-1211-4DFD-A7B3-DD0AE0696B58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4A46539-1211-4DFD-A7B3-DD0AE0696B58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4A46539-1211-4DFD-A7B3-DD0AE0696B58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62BCD632-021F-479C-8EE4-0FDDFE43BBF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62BCD632-021F-479C-8EE4-0FDDFE43BBF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62BCD632-021F-479C-8EE4-0FDDFE43BBF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62BCD632-021F-479C-8EE4-0FDDFE43BBF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C6B4D96-B85E-4EAE-8D94-074E6D04A107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C6B4D96-B85E-4EAE-8D94-074E6D04A107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C6B4D96-B85E-4EAE-8D94-074E6D04A107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C6B4D96-B85E-4EAE-8D94-074E6D04A107}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE100EDC-4B11-440F-98F8-8C88D0C88D58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE100EDC-4B11-440F-98F8-8C88D0C88D58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE100EDC-4B11-440F-98F8-8C88D0C88D58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE100EDC-4B11-440F-98F8-8C88D0C88D58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5C164BB-C270-4CBC-9EFD-9175B1F1B275}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5C164BB-C270-4CBC-9EFD-9175B1F1B275}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5C164BB-C270-4CBC-9EFD-9175B1F1B275}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5C164BB-C270-4CBC-9EFD-9175B1F1B275}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80C23D65-D383-46F0-A399-70E4FAAB44F8}
+	EndGlobalSection
+EndGlobal
